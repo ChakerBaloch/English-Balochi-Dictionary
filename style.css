@@ -1,0 +1,91 @@
+/*Roboto Fonts for best readibility*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+
+
+/* Reset all styles to their default values */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+  }
+  
+  /* Set box-sizing to border-box for all elements */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Style the HTML and body elements */
+  html, body {
+    height: 100%;
+  }
+  
+  body {
+    line-height: 1;
+    font-size: 1rem;
+    font-family: 'Libre Franklin', sans-serif;
+    color: #333;
+    position: absolute;
+    left: 1.79%;
+    right: 0%;
+    top: 0%;
+    bottom: 1.42%;
+    background: linear-gradient(180deg, #FFFFFF -20.31%, #02131B 100%);
+  }
+  
+  /*Name Title*/
+  #eng-balochi{
+    text-align: center;
+    font-size: 40px;
+  }
+
+  /*Menu Icon */
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  .menu.show {
+    display: block;
+  }
+  .menu li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+
+
+
+
+  /* Media queries- Responsive flexbox grid */
+@media(min-width:800px){
+    #eng-balochi{
+        font-size: 40px;
+      }
+   
+}
+
+@media(min-width:800px )and (max-width:1099px){
+    #eng-balochi{
+        font-size: 30px;
+    }
+    
+}
+
+@media(min-width:1100px){
+    #eng-balochi{
+        font-size: 40px;
+    }
+    
+}
