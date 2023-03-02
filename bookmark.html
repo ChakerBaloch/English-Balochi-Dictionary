@@ -15,51 +15,42 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+
 </head>
 <body>
-    <!--Hamburger menu dropdown-->
     <div class="menu-container">
         <i class="material-icons" id="toggle-btn">menu</i>
         <ul class="menu" id="menu">
-          <a href="./index.html" id="hamburger-home"><li>Home</li></a>
+          <a href="./index.html"><li>Home</li></a>
           <a href="About"><li>About</li></a>
           <a href="Contact"><li>Contact</li></a>
         </ul>
 
     </div>
-    
       
     
    <!-- Icons container -->
    <div class="icons-container">
-    <a href="./notification.html"><span class="material-symbols-outlined" id="notification">notifications</span></a>
-    <a href="./account.html"><span class="material-symbols-outlined" id="account">account_circle</span></a>
+    <a href="./notification.html"><span class="material-symbols-outlined">notifications</span></a>
+    <a href="./account.html"><span class="material-symbols-outlined">account_circle</span></a>
   </div>
 
     <div class="title-name">
-        <h1 id="eng-balochi">ENGLIŚ-BALÓCI LABZBALAƆ</h1>
+        <h1 id="eng-balochi">Bookmarks</h1>
 
     <main class="main-content">
         <div class="main-content-container"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis tincidunt leo, id rutrum est. Integer ullamcorper tellus ac ex tristique mattis. Donec urna orci, vestibulum in mauris at, dignissim imperdiet erat. Etiam gravida sapien tellus, id porta felis tincidunt sed. Maecenas placerat tincidunt lectus, a egestas justo vulputate non. Suspendisse accumsan volutpat erat eget tincidunt. Nullam vel sagittis urna, quis blandit magna. Proin blandit posuere velit, quis ultricies purus consequat eu.
-
-            Morbi scelerisque leo tristique justo lacinia consectetur. Donec id auctor tortor, ut fermentum sem. Mauris ac condimentum purus. Nunc convallis mi a est pellentesque commodo. Integer a dolor eget ipsum gravida feugiat. Pellentesque consequat mattis enim, sed cursus urna pulvinar et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque elementum ante a justo varius auctor. Donec vulputate hendrerit bibendum. Proin quis libero vel purus vestibulum fermentum et a massa. Aliquam vestibulum sapien volutpat ex mattis, id pulvinar urna porta. Sed maximus porta diam quis tincidunt.
-            
-            Ut cursus lectus sit amet blandit imperdiet. Integer rhoncus et ex in eleifend. Quisque sit amet fermentum magna. Nunc maximus velit id odio ultricies, nec feugiat libero fringilla. Nulla lobortis ac felis id aliquet. Nam tempus eu erat et hendrerit. Cras sed nibh nec tellus tincidunt aliquet. Etiam lacinia libero augue. Fusce at commodo lorem. Sed at hendrerit purus, semper hendrerit sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis libero finibus maximus tempus. Etiam non semper diam, vitae vehicula ex.
-            
-            Fusce nec ante id eros tristique ultricies. Sed laoreet odio eros, ac fringilla tellus pharetra eu. Sed cursus nisl in nibh malesuada, at sollicitudin felis tempor. Cras sem magna, maximus et quam id, commodo porttitor justo. Etiam pellentesque sapien diam, non ultrices enim blandit sit amet. Donec sagittis id urna vitae accumsan. Cras commodo ex quis nisl vulputate, sit amet tempus dolor porta. Etiam id pharetra massa. Praesent nec metus non lorem iaculis interdum. Pellentesque iaculis laoreet maximus. Curabitur eros odio, commodo sit amet metus ut, cursus ultrices ipsum. Aliquam nec ex porta, ultrices turpis eget, mollis purus. Aliquam non diam nulla. Etiam tempor odio non lacus suscipit fringilla.
-            
-            Duis ac consectetur turpis, vel bibendum nisl. Vivamus vel nisl nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin at leo ex. Aenean ante felis, suscipit id leo ut, egestas egestas orci. Integer ac eros diam. Donec id felis ut sapien molestie tempus. Curabitur scelerisque aliquet sem in pharetra. Donec quis velit fermentum, aliquet ipsum sed, molestie erat. Mauris congue facilisis nulla, ac porttitor turpis consequat nec.</p>
+        
     </main>
 
-    <!--Search Box-->
+    <!--Search Box
     <form>
         <div class="search-container">
           <input type="text"id="search-input" name="search-input" placeholder="Search...">
           <button type="submit"><i class="fas fa-search"></i></button>
         </div>
       </form>
-      
+      -->
 
     <!--Right column menu-->
     <nav class="Right-column-menu">
@@ -144,9 +135,6 @@ document.addEventListener('click', function(event) {
 const home = document.querySelector('#home');
 const favorite = document.querySelector('#favorite');
 const bookmark = document.querySelector('#bookmark');
-const hamburgerHome = document.querySelector('#hamburger-home');
-const notification = document.querySelector('#notification');
-const account = document.querySelector('#account');
 
 //Making person/favorites/home buttons clickable
 
@@ -173,13 +161,13 @@ favorite.addEventListener('click', () => {
   // Set the active icon in localStorage
   localStorage.setItem('activeIcon', 'favorite');
   // Navigate to the favorite page
-  window.location.href = './favorite.html';
+  window.location.href = './favorite';
 });
 
 bookmark.addEventListener('click', () => {
   // Set the active icon in localStorage
   localStorage.setItem('activeIcon', 'bookmark');
-  // Navigate to the bookmark page
+  // Navigate to the person page
   window.location.href = './bookmark.html';
 });
 
