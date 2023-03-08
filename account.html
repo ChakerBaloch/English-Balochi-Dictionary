@@ -7,6 +7,7 @@
     <title>English-Balochi Dictionary</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="./blema.css">
    <!--- <script src="index.js"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -40,22 +41,31 @@
   </div>
 
     <div class="title-name">
-        <a href="#signUp"><h1 id="sgin-up">Sign Up</h1></a><br>
-        <a href="#signIn"><h3 id="log-in">Log In</h3></a>
+        <a href="#signUp"><h1 id="sgin-up">Log In</h1></a><br>
+        <a href="#signIn"><h3 id="log-in">Sign Up</h3></a>
 
     <main class="main-content">
         <div class="main-content-container"></div>
-        
+        <section>
+          <form id="card-form">
+           
+              <label for = "name-input" class="label">Your name </label>
+              <input type="text" class="input" id="name-input" placeholder="John Doe" required>
+  
+              <label for = "email-input" class="label" >Email</label>
+              <input type="email" class="input" id="email-input" placeholder="JohnDoe@gmail.com" required>
+
+              <label for = "tagline-input" class="label">Password</label>
+              <input type="text" class="input" id="tagline-input" placeholder="Password" minlength="10" maxlength="50" required>
+              <p class="help" id="warning"></p>
+  
+    
+            <input type="submit" class="button is-fullwidth">
+          </form>
+        </section>
     </main>
 
-    <!--Search Box
-    <form>
-        <div class="search-container">
-          <input type="text"id="search-input" name="search-input" placeholder="Search...">
-          <button type="submit"><i class="fas fa-search"></i></button>
-        </div>
-      </form>
-      -->
+   
 
     <!--Right column menu-->
     <nav class="Right-column-menu">
