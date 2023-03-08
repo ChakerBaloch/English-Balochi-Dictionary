@@ -1,0 +1,39 @@
+
+
+
+  #learning-library{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    height: 60px;
+   
+  }
+  
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Display 2 columns */
+    grid-gap: 20px; /* Add 20px gap between videos */
+    margin-top: 20px; /* Add margin between title and video grid */
+    background-color: transparent; 
+  }
+  
+  .video {
+    position: relative;
+    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+    height: 0;
+    border-radius: 10px; /* Add border radius */
+    overflow: hidden;
+  }
+  
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+  }
+  
+  

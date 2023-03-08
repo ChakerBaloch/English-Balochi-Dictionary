@@ -5,7 +5,7 @@
 /* Reset all styles to their default values */
 * {
     margin: 0;
-    padding: 0;
+   
     border: 0;
     font-size: 100%;
     font-family: inherit;
@@ -28,6 +28,10 @@
     --ivory-color: #CFCDC2;
     --tan-color: #977557;
     --cool-gray-color: #B4B4B4;
+    --background-color: #f1f1f1;
+    --background-color-secondary: 6E898E;
+    --background-mix-linear: linear-gradient(180deg, rgba(179, 167, 126, 0.42) 29.82%, rgba(105, 153, 155, 0.12) 99.99%, #6E898E 100%);
+
 }
   
   /*secondary colors */
@@ -39,14 +43,17 @@
     --white-color:white;
     --sky-color: rgb(44, 172, 219); /*for hamburger color */
     --light-sky-color:rgb(31, 187, 239); /*for hambuger drop shadow color */
-
-    
+    --beige-light:rgb(245, 245, 220);
+ 
   }
   
   /*colors in your CSS styles */
   body {
-    background-color: var(--white-color);
-  }
+    /*background-image: linear-gradient(to bottom right, #33475b, #0033CC, #FF77CC, rgb(255, 122, 89));
+    background-color:rgba(255, 122, 89, 0.747);*/
+    background-image: var(--white-color)
+}
+
   
   /*text colors plus body*/
   body {
@@ -68,12 +75,12 @@
     text-decoration: none;
   }
   
-  /*Name Title*/
+  /* Name Title
   .title-name{
     text-align: center;
     font-size: 2.5em;
     color: var(--black-color);
-  }
+  } */
   
   /*Hamburger Menu*/
   .material-icons {
@@ -128,9 +135,12 @@
       }
   
   /* Style for menu items on hover */
-  .menu li:hover {
-    background-color:var(--tan-color);
-    transition: transform 0.6s ease-in-out; /*TODO:not working*/
+  .menu a li:hover {
+  
+    transform: scale(1.1); /*TODO:not working*/
+  }
+  .menu a li{
+    transition: transform 0.3s ease;
   }
   
   /* Style for open menu */
@@ -178,79 +188,124 @@
     cursor: pointer;
   }
   
-  /*Search box*/
-  form {
+  .header-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px;
-    color: #1F2323;
-    /*box-shadow: 0px -2px 10px var(--black-color);*/
-    background-color: var(--black-color);
+    height: 10vh; /* Adjust this value to set the container's height */
+    
+  }
+
+  form{
+    padding-top: 2rem;
   }
   
-  /*TODO:figure out how to make form background-color less contrasting*/
   .search-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 600px;
-    height: 40px;
-    border-radius: 10px;
-    overflow:hidden;
+    border: 2px solid rgb(174, 169, 169);
+    border-radius: 35px;
+    overflow: hidden;
+  
   }
   
-  /*style for search input*/
-  input[type="text"] {
-    width: 100%;
-    height: 100%;
-    padding: 8px;
+  
+  #search-input {
+    flex-grow: 1;
     border: none;
     outline: none;
     font-size: 16px;
-    font-weight: 400;
+    padding: 12px;
   }
   
-  /*style dor search button*/
-  button[type="submit"] {
-    width: 40px;
-    height: 100%;
-    padding: 0;
-    margin-left: -40px;
-    border: none;
-    border-radius: 0%;
-    background-color:var(--light-sky-color);
-    color:var(--white-color);
-    cursor: pointer;
+  .search-box {
     display: flex;
     align-items: center;
+  }
+  
+  .search-box input[type="text"] {
+    border: none;
+    border-radius: 30px 0 0 30px;
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  /* Responsive search box */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 600px;
+  min-height:none;
+ 
+  margin: 0 auto;
+}
+
+#search-icon{
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+}
+
+  
+
+  
+  /*searched word results*/
+  .outputWords{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    transition: all 0.2s ease;
+   color:rgb(53, 53, 93);
+  }
+
+  .outputWords {
+    background-color:#cfcdc2;
+    border-radius: 10px;
+    padding: 5rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
-  button[type="submit"]:hover {
-    transform: scale(1.1);
+  #word {
+    margin-bottom: 5px;
+    font-size: 25px;
   }
   
-  /*TODO: figure out focus style*/
-  button[type="submit"]:focus {
-    outline: none;
+  #word-info {
+    font-size: 20px;
+    line-height: 2.5;
   }
   
-  button[type="submit"]::before {
-    content: "\f002";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+  #word-info i {
+    color: black;
   }
   
-  i.fas.fa-search {
-    font-size: 50px;
+  #word-info p {
+    margin-top: 0;
   }
+  
+  
+  .bookmark-icon {
+    display: inline-block;
+    font-size: 20px;
+    color: var(--light-sky-color);
+    cursor: pointer;
+  }
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 /*list icons on right hand side*/
 .Right-column-menu {
@@ -264,7 +319,7 @@
     justify-content: center;
     height: 50vh;
     padding: 1rem;
-    gap: 2em;;
+    row-gap: 2rem;
     color:var(--black-color);
   }
   
@@ -276,6 +331,10 @@
   .material-symbols-outlined:hover{
     color:var(--sky-color);
     transform: scale(1.3);
+    
+  }
+
+  .material-symbols-outlined{
     transition: transform 0.4s ease-in-out;
   }
 
@@ -293,21 +352,15 @@
 
   /*Main content
   TODO: change main content to words and meanings*/
-  .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    padding-top: 40px;
+  main {
+   
+    margin: 0 auto;
+    max-width: 60rem;
+    margin-top: 5rem;
+  }
   
-  }
 
-  .main-content p {
-    max-width: 80%; 
-    font-size: 30px;
-    font-weight: 300;
-  }
+ 
   
 
 /*----------------------------------------------------------------*/
