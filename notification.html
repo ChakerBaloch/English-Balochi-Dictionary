@@ -35,8 +35,8 @@
     
    <!-- Icons container -->
    <div class="icons-container">
-    <a href="./notification.html"><span class="material-symbols-outlined">notifications</span></a>
-    <a href="./account.html"><span class="material-symbols-outlined">account_circle</span></a>
+    <a href="./notification.html"><span class="material-symbols-outlined" id="notification">notifications</span></a>
+    <a href="./account.html"><span class="material-symbols-outlined" id="account">account_circle</span></a>
   </div>
 
     <div class="title-name">
@@ -94,6 +94,9 @@ document.addEventListener('click', function(event) {
 const home = document.querySelector('#home');
 const favorite = document.querySelector('#favorite');
 const bookmark = document.querySelector('#bookmark');
+const notification = document.querySelector('#notification');
+const account = document.querySelector('#account');
+const hamburgerHome = document.querySelector('#hamburger-home');
 
 //Making person/favorites/home buttons clickable
 
@@ -108,6 +111,13 @@ if (activeIcon) {
   // Otherwise, set the home icon as active by default
   home.classList.add('active');
 }
+
+hamburgerHome.addEventListener('click', () => {
+  //set the active icon in the local storage
+  localStorage.setItem('activeIcon', 'home');
+  //Navigate to home page
+  window.location.href = './index.html';
+});
 
 home.addEventListener('click', () => {
   // Set the active icon in localStorage

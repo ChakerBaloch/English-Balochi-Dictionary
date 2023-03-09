@@ -120,6 +120,13 @@ if (activeIcon) {
   home.classList.add('active');
 }
 
+hamburgerHome.addEventListener('click', () => {
+  //set the active icon in the local storage
+  localStorage.setItem('activeIcon', 'home');
+  //Navigate to home page
+  window.location.href = './index.html';
+});
+
 
 home.addEventListener('click', () => {
   // Set the active icon in localStorage

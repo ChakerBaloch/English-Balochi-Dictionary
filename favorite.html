@@ -24,7 +24,7 @@
     <div class="menu-container">
         <i class="material-icons" id="toggle-btn">menu</i>
         <ul class="menu" id="menu">
-          <a href="./index.html"><li>Home</li></a>
+          <a href="./index.html" id="hamburger-home"><li>Home</li></a>
           <a href="About"><li>About</li></a>
           <a href="Contact"><li>Contact</li></a>
         </ul>
@@ -35,7 +35,7 @@
    <!-- Icons container -->
    <div class="icons-container">
     <a href="./notification.html"><span class="material-symbols-outlined" id="notification">notifications</span></a>
-    <a href="./account.html"><span class="material-symbols-outlined">account_circle</span></a>
+    <a href="./account.html"><span class="material-symbols-outlined" id="account">account_circle</span></a>
   </div>
 
     <div class="title-name">
@@ -122,6 +122,13 @@ if (activeIcon) {
   // Otherwise, set the home icon as active by default
   home.classList.add('active');
 }
+
+hamburgerHome.addEventListener('click', () => {
+  //set the active icon in the local storage
+  localStorage.setItem('activeIcon', 'home');
+  //Navigate to home page
+  window.location.href = './index.html';
+});
 
 home.addEventListener('click', () => {
   // Set the active icon in localStorage
