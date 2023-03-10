@@ -50,8 +50,9 @@
   /*colors in your CSS styles */
   body {
     /*background-image: linear-gradient(to bottom right, #33475b, #0033CC, #FF77CC, rgb(255, 122, 89));
-    background-color:rgba(255, 122, 89, 0.747);*/
-    background: linear-gradient(to right, #FFFFFF, #FFEFBA);
+    background-color:rgba(255, 122, 89, 0.747);
+    background: linear-gradient(to right, #FFFFFF, #FFEFBA);*/
+    background-color: white;
 }
 
   

@@ -2,16 +2,19 @@ html,
 body {
   height: 100%;
 }
+body{
+  background-color: linear-gradient(to right, #FFFFFF, #FFEFBA);
+}
 
 body {
   margin: 0;
   min-height: 100%;
   overflow: auto;
-  text-align: center;
+  text-align: auto;
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Source Sans Pro', sans-serif;
-
+  
 }
 
 header {

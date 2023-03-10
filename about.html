@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English-Balochi Dictionary</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="about.css">
     <script src="./index.js"></script>
    <!--- <script src="index.js"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -28,7 +28,7 @@
         <i class="material-icons" id="toggle-btn">menu</i>
         <ul class="menu" id="menu">
           <a href="./index.html" id="hamburger-home"><li>Home</li></a>
-          <a href="./about.html" id="about-dict-info"><li>About</li></a>
+          <a href="./about.html"><li>About</li></a>
           <a href="#contact"><li>Contact</li></a>
         </ul>
 
@@ -42,29 +42,35 @@
     <a href="./account.html"><span class="material-symbols-outlined" id="account">account_circle</span></a>
   </div>
 
-  <div class="header-container">
-    <div class="title-name">
-      <h1 id="eng-balochi"><img src="./Images/flc_design20230306122308.png"></h1>
-    </div>
+ 
   
-    <form>
-      <div class="search-container">
-        <input type="text" id="search-input" name="search-input" placeholder="English-Balochi translation...">
-        <button type="submit"><span class="material-symbols-outlined" id="search-icon">search</span></button>
-        <p id="word-of-the-day"></p>
-      </div>
-    </form>
-  </div>
+   
   
 
   <!--main content-->
     <main>
-       
+        <main class="main-content">
+            <div class="main-content-container"></div>
+            <div class="header-container">
+                <div class="title-name">
+                  <h1 id="eng-balochi"><img src="./Images/flc_design20230306122308.png"></h1>
+             
+               </div>
+            <div class="about-dict">
+                <p>The English-Balochi dictionary project is an initiative aimed at creating a comprehensive online dictionary that translates words and phrases
+                from English to Balochi, a language spoken by more than 8 million people in Iran, Pakistan, and Afghanistan. The dictionary will provide an invaluable
+                resource for Balochi speakers who wish to improve their English skills and for English speakers who want to learn Balochi. It will include a vast range 
+                 of vocabulary, including common words and phrases as well as more specialized terms, and will be regularly updated to reflect changes in the languages. 
+                The project is a significant step in promoting language diversity and cultural understanding, and will make a valuable contribution to the preservation and promotion
+                of the Balochi language.
+                </p>
+            </div>
+        </main>
   
     </main>
       
 
-    <!--Right column menu-->
+    <!--Right column menu
     <nav class="Right-column-menu">
         <div class="Right-column-menu-content"></div>
          <a href="./index.html"><span class="material-symbols-outlined" id="home">Home</span></a>
@@ -72,6 +78,7 @@
          <a href="./bookmark.html"><span class="material-symbols-outlined" id="bookmark">bookmark</span></a>
          </div>
     </nav>
+    -->
 
 </body>
 </html>
@@ -107,8 +114,6 @@ const bookmark = document.querySelector('#bookmark');
 const hamburgerHome = document.querySelector('#hamburger-home');
 const notification = document.querySelector('#notification');
 const account = document.querySelector('#account');
-const aboutDict = document.querySelector('#about-dict-info');
-
 
 const activeIcon = localStorage.getItem('activeIcon');
 if (activeIcon) {
@@ -127,7 +132,6 @@ if (activeIcon) {
 aboutDict.addEventListener('click', () => {
   aboutDict.classList.remove('active');
 });
-
 
 hamburgerHome.addEventListener('click', () => {
   //set the active icon in the local storage
